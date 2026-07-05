@@ -1,9 +1,4 @@
-project "yaml-cpp"
-	kind "StaticLib"
-	language "C++"
-
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+solution.DefineCStaticLibrary("yaml-cpp", function()
 
 	files
 	{
@@ -26,13 +21,11 @@ project "yaml-cpp"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++20"
-		staticruntime "on"
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++20"
-		staticruntime "on"
 
 	filter "configurations:Debug"
 		runtime "Debug"
@@ -41,3 +34,5 @@ project "yaml-cpp"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+
+end)
