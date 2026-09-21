@@ -8,3 +8,4 @@ yaml-cpp.vcxproj.filters
 yaml-cpp.vcxproj.user
 
 Makefile
+*.Android.mk
