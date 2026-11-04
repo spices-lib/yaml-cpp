@@ -9,3 +9,5 @@ yaml-cpp.vcxproj.user
 
 Makefile
 *.Android.mk
+
+*.xcodeproj
